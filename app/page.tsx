@@ -1,7 +1,6 @@
 // import Image from "next/image";
 
 import { ImageSlider } from "@/components/home/imageSlider";
-import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
     <div>
