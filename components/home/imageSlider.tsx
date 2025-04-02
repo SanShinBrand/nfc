@@ -93,7 +93,7 @@ export function ImageSlider() {
   }, [api,lightboxOpen]);
 
   return (
-    <div className="w-full px-0 sm:px-6 md:px-8 top-1 ">
+    <div className="w-full px-0 sm:px-6 md:px-8 top-1 mt-2">
       {/* px-4 sm:px-6 md:px-8 */}
       <div className="relative w-full max-w-6xl mx-auto">
         <Carousel
@@ -110,9 +110,9 @@ export function ImageSlider() {
                 key={item.id}
                 className="pl-3 sm:pl-4 basis-full sm:basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4"
               >
-                <Card className="overflow-hidden p-0  border-0 shadow-md cursor-pointer " onClick={() => openLightbox(item)}>
-                  <CardContent className="p-0">
-                    <div className="relative aspect-square overflow-hidden">
+                <Card className="overflow-hidden p-0   border-0 shadow-md cursor-pointer " onClick={() => openLightbox(item)}>
+                  <CardContent className="p-0 ">
+                    <div className="relative aspect-square overflow-hidden ">
                       <Image
                         src={item.src || "/placeholder.svg"}
                         alt={item.alt}
@@ -142,7 +142,7 @@ export function ImageSlider() {
       {/* Lightbox Modal */}
       {lightboxOpen && selectedImage && (
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 animate-in fade-in duration-200">
-          <div className="relative w-full max-w-4xl max-h-[90vh] bg-white rounded-lg overflow-hidden">
+          <div className="relative w-full max-w-4xl max-h-[90vh] bg-white rounded-lg overflow-hidden flex items-center justify-center ">
             <div className="absolute top-2 right-2 z-10">
               <Button
                 variant="ghost"
@@ -155,7 +155,7 @@ export function ImageSlider() {
               </Button>
             </div>
 
-            <div className="relative w-full h-[70vh] sm:h-[80vh]">
+            <div className="w-full h-[70vh] sm:h-[80vh]">
               <Image
                 src={selectedImage.src || "/placeholder.svg"}
                 alt={selectedImage.alt}
