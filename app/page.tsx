@@ -1,10 +1,14 @@
 // import Image from "next/image";
 
+import CareInstructions from "@/components/home/careInstructions";
 import { ImageSlider } from "@/components/home/imageSlider";
+import ProductDetails from "@/components/home/productDetils";
 export default function Home() {
   return (
     <div>
-      <ImageSlider/>
+      <ImageSlider />
+      <ProductDetails />
+      <CareInstructions/>
     </div>
   );
 }

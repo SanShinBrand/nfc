@@ -93,7 +93,8 @@ export function ImageSlider() {
   }, [api,lightboxOpen]);
 
   return (
-    <div className="w-full px-0 sm:px-6 md:px-8 top-1 mt-2">
+    <div className="w-full px-0 sm:px-6 md:px-8 top-1 md:mt-3 mt-0">
+    {/* <div> */}
       {/* px-4 sm:px-6 md:px-8 */}
       <div className="relative w-full max-w-6xl mx-auto">
         <Carousel
@@ -110,13 +111,15 @@ export function ImageSlider() {
                 key={item.id}
                 className="pl-3 sm:pl-4 basis-full sm:basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4"
               >
-                <Card className="overflow-hidden p-0   border-0 shadow-md cursor-pointer " onClick={() => openLightbox(item)}>
+                <Card className="overflow-hidden p-0  border-0 shadow-md cursor-pointer " onClick={() => openLightbox(item)}>
                   <CardContent className="p-0 ">
                     <div className="relative aspect-square overflow-hidden ">
                       <Image
                         src={item.src || "/placeholder.svg"}
                         alt={item.alt}
                         fill
+                        priority
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-fill transition-transform hover:scale-105 duration-300"
                       />
                     </div>

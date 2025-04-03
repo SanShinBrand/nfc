@@ -110,3 +110,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* product details information section */
+
+.primary-text {
+  @apply text-gray-400 text-lg md:text-xl font-medium capitalize
+}
+
+.secondary-text {
+  @apply text-white text-lg md:text-xl font-bold -mt-1
+}
