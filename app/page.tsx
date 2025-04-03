@@ -2,11 +2,13 @@
 
 import CareInstructions from "@/components/home/careInstructions";
 import { ImageSlider } from "@/components/home/imageSlider";
+import OurLink from "@/components/home/ourLink";
 import ProductDetails from "@/components/home/productDetils";
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col gap-5 sm:gap-7 md:gap-9">
       <ImageSlider />
+      <OurLink/>
       <ProductDetails />
       <CareInstructions/>
     </div>

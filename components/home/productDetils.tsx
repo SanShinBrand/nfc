@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import material from "../../public/ProductDetails/material.svg";
 import Image from "next/image";
@@ -14,16 +15,16 @@ import { useRouter } from "next/navigation";
 const ProductDetails = () => {
   const router = useRouter();
   const link = "http://google.com";
+
   const handleClick = (link: string) => {
     // Check if the link starts with http:// or https://
-    if(link.startsWith("https://") || link.startsWith("http://")) {
-      window.open(link,"_blank")
+    if (link.startsWith("https://") || link.startsWith("http://")) {
+      window.open(link, "_blank");
     }
-   
   };
 
   return (
-    <div className="w-full px-3 sm:px-6 md:px-8 mt-3 space-y-5 ">
+    <div className="w-full px-3 sm:px-6 md:px-8 space-y-5 ">
       {/* <h1 className="font-bold text-xl md:text-2xl lg:text-3xl mb-4">
         Product Information
       </h1> */}
@@ -74,7 +75,7 @@ const ProductDetails = () => {
               <Tooltip>
                 <TooltipTrigger>
                   <Link
-                    onClick={()=> handleClick(link)}
+                    onClick={() => handleClick(link)}
                     className="w-10 hover:cursor-pointer stroke-gray-400 hover:stroke-blue-500  "
                   />
                 </TooltipTrigger>
