@@ -120,3 +120,11 @@
 .secondary-text {
   @apply text-white text-lg md:text-xl font-bold -mt-1
 }
+
+.Detail_Lists{
+  @apply h-full flex gap-5 items-center
+}
+
+.Detail_Icon {
+  @apply w-10 h-8 stroke-gray-400
+}
