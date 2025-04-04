@@ -14,7 +14,7 @@ import {
 const handleClick = (link: string) => {
   // Check if the link starts with http:// or https://
   if (link.startsWith("https://") || link.startsWith("http://")) {
-    window.open(link, "_blank");
+    window.open(link);
   }
 };
 
