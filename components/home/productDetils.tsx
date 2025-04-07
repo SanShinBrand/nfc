@@ -100,8 +100,8 @@ const ProductDetails = () => {
 
   // new code
   return (
-    <div className="w-full px-3 sm:px-6 md:px-8 space-y-4 ">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 space-y-4 ">
+    <div className="w-full px-3 sm:px-6 md:px-8 flex flex-col gap-4 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
         {/* product number */}
         <div className="Detail_Lists   ">
           <FileDigit className="Detail_Icon" />
@@ -139,7 +139,7 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 space-y-4 gap-4 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
         {/* material */}
         <div className="Detail_Lists">
           <Image
