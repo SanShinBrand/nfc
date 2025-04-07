@@ -4,6 +4,7 @@ import CareInstructions from "@/components/home/careInstructions";
 import { ImageSlider } from "@/components/home/imageSlider";
 import OurLink from "@/components/home/ourLink";
 import ProductDetails from "@/components/home/productDetils";
+import SizeChart from "@/components/home/table/sizeChart";
 export default function Home() {
   return (
     <div className="flex flex-col gap-5 sm:gap-7 md:gap-9">
@@ -11,6 +12,7 @@ export default function Home() {
       <OurLink/>
       <ProductDetails />
       <CareInstructions/>
+      <SizeChart/>
     </div>
   );
 }

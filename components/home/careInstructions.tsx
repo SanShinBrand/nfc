@@ -1,5 +1,11 @@
 import Image from "next/image";
 import React from "react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 
 const CareInstructions = () => {
   const imageItems = [
@@ -41,19 +47,29 @@ const CareInstructions = () => {
     },
   ];
 
-  return <div className="flex justify-center gap-2 ">
-    {
-      imageItems.map((item) => (
-        <Image
-          key={item.id}
-          src={item.src}
-          alt={item.alt}
-          width={35}
-          height={35}
-        />
-      ))
-    }
-  </div>;
+  return (
+    <div className="w-full px-3 sm:px-6 md:px-8 flex justify-center gap-2 sm:justify-start mt-4 ">
+      {imageItems.map((item) => (
+        <div>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger>
+                <Image
+                  key={item.id}
+                  src={item.src}
+                  alt={item.alt}
+                  width={35}
+                  height={35}
+                  className="cursor-pointer"
+                />
+              </TooltipTrigger>
+              <TooltipContent>{item.alt}</TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default CareInstructions;

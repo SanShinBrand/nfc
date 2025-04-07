@@ -159,7 +159,7 @@ const ProductDetails = () => {
           <Store className="Detail_Icon" />
           <div className="flex flex-col ">
             <p className="primary-text">Shop from</p>
-            <div className="flex gap-3 items-center">
+            <div className="flex gap-3 items-center relative">
               <p className="secondary-text">SanShin Facebook Page</p>
 
               <TooltipProvider>
@@ -167,7 +167,7 @@ const ProductDetails = () => {
                   <TooltipTrigger>
                     <Link
                       onClick={() => handleClick(link)}
-                      className="w-10 hover:cursor-pointer stroke-gray-400 hover:stroke-blue-500  "
+                      className=" absolute -top-1.5 -right-8 w-10 hover:cursor-pointer stroke-gray-400 hover:stroke-blue-500  "
                     />
                   </TooltipTrigger>
                   <TooltipContent>
