@@ -1,6 +1,7 @@
 // import Image from "next/image";
 
 import CareInstructions from "@/components/home/careInstructions";
+import ContactUs from "@/components/home/contactUs";
 import { ImageSlider } from "@/components/home/imageSlider";
 import OurLink from "@/components/home/ourLink";
 import ProductDetails from "@/components/home/productDetils";
@@ -13,6 +14,7 @@ export default function Home() {
       <ProductDetails />
       <CareInstructions/>
       <SizeChart/>
+      <ContactUs/>
     </div>
   );
 }

@@ -50,7 +50,7 @@ const CareInstructions = () => {
   return (
     <div className="w-full px-3 sm:px-6 md:px-8 flex justify-center gap-2 sm:justify-start mt-4 ">
       {imageItems.map((item) => (
-        <div>
+        <div key={item.id}>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger>
