@@ -2,6 +2,7 @@
 
 import CareInstructions from "@/components/home/careInstructions";
 import ContactUs from "@/components/home/contactUs";
+import Footer from "@/components/home/footer";
 import { ImageSlider } from "@/components/home/imageSlider";
 import OurLink from "@/components/home/ourLink";
 import ProductDetails from "@/components/home/productDetils";
@@ -15,6 +16,7 @@ export default function Home() {
       <CareInstructions/>
       <SizeChart/>
       <ContactUs/>
+      {/* <Footer/> */}
     </div>
   );
 }
