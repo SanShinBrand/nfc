@@ -4,7 +4,7 @@ const ContactUs = () => {
   return (
     // <section className="min-h-screen bg-gradient-to-r from-blue-600 via-blue-800 to-blue-900 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900 ">
     <section className="mb-6">
-      <div className="container flex flex-col min-h-screen px-6 mx-auto">
+      <div className="container flex flex-col px-6 mx-auto">
         <div className="flex-1 lg:flex lg:items-center lg:-mx-6">
           {/* w-full flex flex-col gap-4 */}
           <div className="text-white lg:w-1/2 lg:mx-6">
@@ -191,7 +191,7 @@ const ContactUs = () => {
             </div>
           </div>
 
-          <div className="mt-8 lg:w-1/2 lg:mx-6">
+          {/* <div className="mt-8 lg:w-1/2 lg:mx-6">
             <div className="w-full px-6 py-8 mx-auto overflow-hidden border border-white shadow-2xl rounded-xl dark:bg-gray-900 lg:max-w-xl">
               <h1 className="text-xl font-medium text-white dark:text-gray-200">
                 Contact form
@@ -235,7 +235,7 @@ const ContactUs = () => {
                 </button>
               </form>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
