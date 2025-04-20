@@ -148,7 +148,7 @@ const ContactUs = () => {
 
                 <a
                   className="mx-1.5 text-white transition-colors duration-300 transform hover:text-blue-500"
-                  href="#"
+                  href="https://www.instagram.com/sanshin739?igsh=ZGN3bWxnbnRrenY="
                 >
                   <svg
                     className="w-8 h-8"
