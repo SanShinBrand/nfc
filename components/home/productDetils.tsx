@@ -21,6 +21,11 @@ import { useRouter, useSearchParams } from "next/navigation";
 
 type ProductDetails = {
   id: string;
+  color : string ,
+  release : string ,
+  material : string,
+  shopFrom : string,
+  shopFromUrl : string
 };
 const ProductDetails = ({ id }: ProductDetails) => {
   // const router = useRouter();
@@ -30,6 +35,7 @@ const ProductDetails = ({ id }: ProductDetails) => {
 
   const sizeLetter = data[0].toUpperCase();
   const link = "http://google.com";
+
 
   const handleClick = (link: string) => {
     // Check if the link starts with http:// or https://
