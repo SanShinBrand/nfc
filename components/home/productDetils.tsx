@@ -17,21 +17,24 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { useRouter } from "next/navigation";
-
+import { useRouter, useSearchParams } from "next/navigation";
 
 type ProductDetails = {
-  id : string 
-}
-const ProductDetails = ({id} : ProductDetails) => {
-  const router = useRouter();
-  // const params = 
+  id: string;
+};
+const ProductDetails = ({ id }: ProductDetails) => {
+  // const router = useRouter();
+  const params = useSearchParams();
+  const sizeData = params.get("size");
+  const data = sizeData!.split("_");
+
+  const sizeLetter = data[0].toUpperCase();
   const link = "http://google.com";
 
   const handleClick = (link: string) => {
     // Check if the link starts with http:// or https://
     if (link.startsWith("https://") || link.startsWith("http://")) {
-     window.location.href= link
+      window.location.href = link;
     }
   };
 
@@ -120,7 +123,7 @@ const ProductDetails = ({id} : ProductDetails) => {
           <Maximize2 className="Detail_Icon" />
           <div className="flex flex-col ">
             <p className="primary-text">size</p>
-            <p className="secondary-text">M</p>
+            <p className="secondary-text">{sizeLetter}</p>
           </div>
         </div>
         {/* color */}
