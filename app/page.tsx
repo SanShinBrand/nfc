@@ -10,13 +10,14 @@ import SizeChart from "@/components/home/table/sizeChart";
 export default function Home() {
   return (
     <div className="flex flex-col gap-5 sm:gap-7 md:gap-9">
-      <ImageSlider />
+      {/* <ImageSlider />
       <OurLink/>
       <ProductDetails />
       <CareInstructions/>
       <SizeChart/>
-      <ContactUs/>
+      <ContactUs/> */}
       {/* <Footer/> */}
+      hello world
     </div>
   );
 }

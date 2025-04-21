@@ -19,8 +19,13 @@ import {
 } from "@/components/ui/tooltip";
 import { useRouter } from "next/navigation";
 
-const ProductDetails = () => {
+
+type ProductDetails = {
+  id : string 
+}
+const ProductDetails = ({id} : ProductDetails) => {
   const router = useRouter();
+  // const params = 
   const link = "http://google.com";
 
   const handleClick = (link: string) => {
@@ -107,7 +112,7 @@ const ProductDetails = () => {
           <FileDigit className="Detail_Icon" />
           <div className="flex flex-col ">
             <p className="primary-text">Product Number</p>
-            <p className="secondary-text">12/12/2022</p>
+            <p className="secondary-text">{id}</p>
           </div>
         </div>
         {/* size */}
