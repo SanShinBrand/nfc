@@ -21,6 +21,8 @@ type ProductWithRelations = typeof products.$inferSelect & {
 
 const page = async ({ params }: Props) => {
   const { id } = await params;
+  console.log('id',id);
+  
   const ProductId = Number(id);
 
   const result = await db.query.products.findFirst({
@@ -31,13 +33,11 @@ const page = async ({ params }: Props) => {
     },
   });
 
-  const productsInfo = result as ProductWithRelations | undefined;
-
-  if(!productsInfo){
-    NotFound();
+  if (!result) {
+    return <NotFound />;
   }
 
-  // console.log('productsInfo',productsInfo?.images);
+  const productsInfo = result as ProductWithRelations | undefined;
 
   return (
     <main className="flex flex-col gap-5 sm:gap-7 md:gap-9">

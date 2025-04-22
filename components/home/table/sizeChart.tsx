@@ -32,7 +32,6 @@ const SizeChart = () => {
   const searchParams = useSearchParams();
   const sizeData = searchParams.get("size");
 
-  console.log('size',sizeData);
   
   const [size, shoulder, chest, sleeve, length] = sizeData!.split("_");
 

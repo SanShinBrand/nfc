@@ -4,8 +4,8 @@ import React from 'react'
 
 const NotFound = () => {
   return (
-    <section className="relative">
-    <div className=" container min-h-screen px-6 py-12 mx-auto lg:flex lg:items-center lg:gap-12">
+    <section className="relative ">
+    <div className=" container min-h-screen px-6 py-12 mx-auto lg:flex lg:items-center lg:gap-12 ">
         <div className="w-full lg:w-1/2 ">
             <p className="text-xl md:text-2xl font-medium text-blue-400">404 error</p>
             <h1 className="mt-3 text-3xl md:text-5xl font-semibold text-white">Page not found</h1>
@@ -27,7 +27,7 @@ const NotFound = () => {
             </div> */}
         </div>
 
-        <div className="relative w-ful  flex items-center justify-center mx-auto">
+        <div className="w-full mt-20 md:mt-0 flex items-center justify-center mx-auto">
             <Image className="w-full max-w-lg lg:mx-auto" src='../not-found.svg' width={100} height={100} alt=""/>
         </div>
         

@@ -34,6 +34,9 @@ const params = useSearchParams();
 
   const sizeLetter = data[0].toUpperCase();
 
+  console.log('sizeLetter')
+  
+
   const handleClick = (link: string) => {
     // Check if the link starts with http:// or https://
     if (link.startsWith("https://") || link.startsWith("http://")) {
