@@ -20,7 +20,7 @@ import {
 import {  useSearchParams } from "next/navigation";
 
 type ProductDetails = {
-  id: string;
+  id: number;
   color : string ,
   release_date : string ,
   material : string,

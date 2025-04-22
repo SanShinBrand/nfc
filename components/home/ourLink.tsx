@@ -11,6 +11,9 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
+type TitleProps = {
+  title : string 
+}
 const handleClick = (link: string) => {
   // Check if the link starts with http:// or https://
   if (link.startsWith("https://") || link.startsWith("http://")) {
@@ -19,7 +22,7 @@ const handleClick = (link: string) => {
 };
 
 
-const OurLink = () => {
+const OurLink = ({title}: TitleProps) => {
   const link = "https://www.google.com";
   return (
     <div className="bg-red-0 w-full px-3 sm:px-6 md:px-8">
@@ -35,7 +38,7 @@ const OurLink = () => {
               SanShin
             </h1>
             <p className="text-white text-sm md:text-lg font-medium -mt-1">
-              Flower Edition : Episode 1 Tulip Tee
+              {title}
             </p>
           </div>
           <TooltipProvider>

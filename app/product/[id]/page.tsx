@@ -21,12 +21,16 @@ type ProductWithRelations = typeof products.$inferSelect & {
 
 const page = async ({ params }: Props) => {
   const { id } = await params;
-  console.log('id',id);
-  
-  const ProductId = Number(id);
+
+  if (!id.includes("diPsIsihT")) return <NotFound />;
+
+  const [qid, pid] = id.split("diPsIsihT").map(Number);
+ 
+  const QueryId = Number(qid);
+
 
   const result = await db.query.products.findFirst({
-    where: eq(products.id, ProductId),
+    where: eq(products.id, QueryId),
     with: {
       images: true,
       cares: true,
@@ -49,7 +53,7 @@ const page = async ({ params }: Props) => {
         material={productsInfo?.material || ''}
         shopFrom={productsInfo?.shopFrom || ''}
         shopFromUrl={productsInfo?.shopFromUrl || ''}
-        id={id}
+        id={pid}
       />
       <CareInstructions images={productsInfo?.cares || []} />
       <SizeChart />

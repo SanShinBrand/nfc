@@ -14,6 +14,7 @@ export const products = pgTable('product',{
     material : text('material'),
     shopFrom : text('shopFrom'),
     shopFromUrl : text('shopFromUrl'),
+    title : text('title'),
 })
 
 export const productImages = pgTable('product_images',{
