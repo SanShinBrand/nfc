@@ -51,7 +51,7 @@ const page = async ({ params }: Props) => {
         shopFromUrl={productsInfo?.shopFromUrl || ''}
         id={id}
       />
-      <CareInstructions />
+      <CareInstructions images={productsInfo?.cares || []} />
       <SizeChart />
       <ContactUs />
       {/* <Footer/> */}
