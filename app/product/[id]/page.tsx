@@ -8,6 +8,7 @@ import { db } from "@/server";
 import React from "react";
 import { products, productCares, productImages } from "@/server/schema";
 import { eq } from "drizzle-orm";
+import NotFound from "@/app/not-found";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -33,7 +34,7 @@ const page = async ({ params }: Props) => {
   const productsInfo = result as ProductWithRelations | undefined;
 
   if(!productsInfo){
-    // notFound();
+    NotFound();
   }
 
   // console.log('productsInfo',productsInfo?.images);
@@ -42,14 +43,14 @@ const page = async ({ params }: Props) => {
     <main className="flex flex-col gap-5 sm:gap-7 md:gap-9">
       <ImageSlider images={productsInfo?.images || [] } />
       <OurLink />
-      {/* <ProductDetails
-        color={productsInfo.color}
-        release_date={productsInfo?.release_date}
-        material={productsInfo?.material}
-        shopFrom={productsInfo?.shopFrom}
-        shopFromUrl={productsInfo?.shopFromUrl}
+      <ProductDetails
+        color={productsInfo?.color || ''}
+        release_date={productsInfo?.release_date || ''}
+        material={productsInfo?.material || ''}
+        shopFrom={productsInfo?.shopFrom || ''}
+        shopFromUrl={productsInfo?.shopFromUrl || ''}
         id={id}
-      /> */}
+      />
       <CareInstructions />
       <SizeChart />
       <ContactUs />

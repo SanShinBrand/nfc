@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import material from "../../public/ProductDetails/material.svg";
+import materialImage from "../../public/ProductDetails/material.svg";
 import Image from "next/image";
 import {
   CalendarDays,
@@ -17,25 +17,22 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { useRouter, useSearchParams } from "next/navigation";
+import {  useSearchParams } from "next/navigation";
 
 type ProductDetails = {
   id: string;
   color : string ,
-  release : string ,
+  release_date : string ,
   material : string,
   shopFrom : string,
   shopFromUrl : string
 };
-const ProductDetails = ({ id }: ProductDetails) => {
-  // const router = useRouter();
-  const params = useSearchParams();
+const ProductDetails = ({ id,color,release_date,material,shopFrom,shopFromUrl }: ProductDetails) => {
+const params = useSearchParams();
   const sizeData = params.get("size");
   const data = sizeData!.split("_");
 
   const sizeLetter = data[0].toUpperCase();
-  const link = "http://google.com";
-
 
   const handleClick = (link: string) => {
     // Check if the link starts with http:// or https://
@@ -138,7 +135,7 @@ const ProductDetails = ({ id }: ProductDetails) => {
           <div className="flex flex-col ">
             <p className="primary-text">color</p>
             <div className="flex items-center gap-3">
-              <p className="secondary-text">red</p>
+              <p className="secondary-text">{color}</p>
               <div className=" w-5 h-5 rounded"></div>
             </div>
           </div>
@@ -148,7 +145,7 @@ const ProductDetails = ({ id }: ProductDetails) => {
           <CalendarDays className="Detail_Icon" />
           <div className="flex flex-col ">
             <p className="primary-text">Release Date</p>
-            <p className="secondary-text">12/12/2022</p>
+            <p className="secondary-text">{release_date}</p>
           </div>
         </div>
       </div>
@@ -157,7 +154,7 @@ const ProductDetails = ({ id }: ProductDetails) => {
         {/* material */}
         <div className="Detail_Lists">
           <Image
-            src={material}
+            src={materialImage}
             alt="material"
             width={40}
             height={40}
@@ -165,7 +162,7 @@ const ProductDetails = ({ id }: ProductDetails) => {
           />
           <div className="flex flex-col ">
             <p className="primary-text">material</p>
-            <p className="secondary-text">100% USA Cotton</p>
+            <p className="secondary-text">{material}</p>
           </div>
         </div>
         {/* shop from */}
@@ -174,18 +171,18 @@ const ProductDetails = ({ id }: ProductDetails) => {
           <div className="flex flex-col ">
             <p className="primary-text">Shop from</p>
             <div className="flex gap-3 items-center relative">
-              <p className="secondary-text">SanShin Facebook Page</p>
+              <p className="secondary-text">{shopFrom}</p>
 
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
                     <Link
-                      onClick={() => handleClick(link)}
+                      onClick={() => handleClick(shopFromUrl)}
                       className=" absolute -top-1.5 -right-8 w-10 hover:cursor-pointer stroke-gray-400 hover:stroke-blue-500  "
                     />
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>SanShin Facebook Page</p>
+                    <p>{shopFrom}</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
