@@ -17,26 +17,32 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import {  useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import NotFound from "@/app/not-found";
 
 type ProductDetails = {
   id: number;
-  release_date : string ,
-  material : string,
-  shopFrom : string,
-  shopFromUrl : string
+  release_date: string;
+  material: string;
+  shopFrom: string;
+  shopFromUrl: string;
 };
-const ProductDetails = ({ id,release_date,material,shopFrom,shopFromUrl }: ProductDetails) => {
-const params = useSearchParams();
+const ProductDetails = ({
+  id,
+  release_date,
+  material,
+  shopFrom,
+  shopFromUrl,
+}: ProductDetails) => {
+  const params = useSearchParams();
   const sizeData = params.get("size");
-  const colorData = params.get('color')
+  const colorData = params.get("c");
+
+  if (!sizeData || !colorData) return <NotFound />;
+
   const data = sizeData!.split("_");
 
   const sizeLetter = data[0].toUpperCase();
-
-  console.log('sizeLetter')
-  
-
   const handleClick = (link: string) => {
     // Check if the link starts with http:// or https://
     if (link.startsWith("https://") || link.startsWith("http://")) {
