@@ -4,19 +4,6 @@ import { useSearchParams } from "next/navigation";
 import {  columns } from "./column";
 import { DataTable } from "./data-table";
 
-// async function getData(): Promise<sizeChart[]> {
-//   // Fetch data from your API here.
-//   return [
-//     {
-//       size: "S",
-//       shoulder: 18,
-//       chest: 23,
-//       sleeve: 23,
-//       length: 26,
-//     },
-
-//   ]
-// }
 
 export type sizeChart = {
   size: string;

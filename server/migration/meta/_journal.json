@@ -43,6 +43,34 @@
       "when": 1745327975533,
       "tag": "0005_nervous_grim_reaper",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1745336197534,
+      "tag": "0006_public_talos",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1745336350434,
+      "tag": "0007_clear_slyde",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1745377431307,
+      "tag": "0008_tiny_amphibian",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1745378981330,
+      "tag": "0009_closed_brood",
+      "breakpoints": true
     }
   ]
 }

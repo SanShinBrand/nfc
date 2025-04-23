@@ -21,15 +21,15 @@ import {  useSearchParams } from "next/navigation";
 
 type ProductDetails = {
   id: number;
-  color : string ,
   release_date : string ,
   material : string,
   shopFrom : string,
   shopFromUrl : string
 };
-const ProductDetails = ({ id,color,release_date,material,shopFrom,shopFromUrl }: ProductDetails) => {
+const ProductDetails = ({ id,release_date,material,shopFrom,shopFromUrl }: ProductDetails) => {
 const params = useSearchParams();
   const sizeData = params.get("size");
+  const colorData = params.get('color')
   const data = sizeData!.split("_");
 
   const sizeLetter = data[0].toUpperCase();
@@ -138,7 +138,7 @@ const params = useSearchParams();
           <div className="flex flex-col ">
             <p className="primary-text">color</p>
             <div className="flex items-center gap-3">
-              <p className="secondary-text">{color}</p>
+              <p className="secondary-text">{colorData}</p>
               <div className=" w-5 h-5 rounded"></div>
             </div>
           </div>

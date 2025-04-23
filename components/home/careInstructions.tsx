@@ -9,7 +9,6 @@ import {
 
 type careImagesObject = {
   id: number;
-    productId: number;
     serialNum: number;
     careUrl: string;
     careAlt: string;
