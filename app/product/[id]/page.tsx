@@ -18,6 +18,7 @@ import NotFound from "@/app/not-found";
 
 type Props = {
   params: Promise<{ id: string }>;
+  
 };
 
 type ProductWithRelations = typeof products.$inferSelect & {
