@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "SanShin",
   description: "Minimal pieces. Premium quality. Limited drop.",
+  icons : {
+    icon : "../logo-white-svg.svg"
+  }
 };
 
 export default function RootLayout({

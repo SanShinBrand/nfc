@@ -41,6 +41,9 @@ const page = async ({ params }: Props) => {
 
   if (isNaN(QueryId)) return <NotFound />;
 
+  console.log("QueryId", id,"\n",pid,"\n",QueryId);
+  
+
   const result = await db.query.products.findFirst({
     where: (product, { eq }) => eq(product.id, QueryId),
     with: {
