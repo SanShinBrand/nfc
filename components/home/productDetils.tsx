@@ -187,7 +187,7 @@ const ProductDetails = ({
                   <TooltipTrigger>
                     <Link
                       onClick={() => handleClick(shopFromUrl)}
-                      className=" absolute -top-1.5 -right-8 w-10 hover:cursor-pointer stroke-gray-400 hover:stroke-blue-500  "
+                      className=" absolute -top-0 -right-8 w-10 hover:cursor-pointer stroke-gray-400 hover:stroke-blue-500  "
                     />
                   </TooltipTrigger>
                   <TooltipContent>
