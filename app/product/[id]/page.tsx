@@ -41,8 +41,7 @@ const page = async ({ params }: Props) => {
 
   if (isNaN(QueryId)) return <NotFound />;
 
-  console.log("QueryId", id,"\n",pid,"\n",QueryId);
-  
+
 
   const result = await db.query.products.findFirst({
     where: (product, { eq }) => eq(product.id, QueryId),
@@ -60,8 +59,6 @@ const page = async ({ params }: Props) => {
 
   const product = result as ProductWithRelations | undefined;
 
-  // product?.imagesLink.map(link => link.)
-  console.log("product", product);
 
   return (
     <main className="flex flex-col gap-5 sm:gap-7 md:gap-9">
