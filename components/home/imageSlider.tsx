@@ -112,6 +112,7 @@ export function ImageSlider({ images }: ImageSliderProps) {
                         alt={item.imageAlt}
                         fill
                         priority
+                        unoptimized
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-fill transition-transform hover:scale-105 duration-300"
                       />
@@ -157,6 +158,8 @@ export function ImageSlider({ images }: ImageSliderProps) {
                 alt={selectedImage.imageAlt}
                 fill
                 className="object-contain"
+                unoptimized
+                priority
               />
             </div>
 

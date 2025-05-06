@@ -28,7 +28,7 @@ const NotFound = () => {
         </div>
 
         <div className="w-full mt-20 md:mt-0 flex items-center justify-center mx-auto">
-            <Image className="w-full max-w-lg lg:mx-auto" src='../not-found.svg' width={100} height={100} alt="" priority/>
+            <Image className="w-full max-w-lg lg:mx-auto" src='../not-found.svg' width={100} height={100} alt="" priority unoptimized/>
         </div>
         
     </div>

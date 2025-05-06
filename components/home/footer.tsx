@@ -13,6 +13,8 @@ const Footer = () => {
               alt="logo"
               width={30}
               height={30}
+              unoptimized
+              priority
             />
             <h1 className="text-xl">SanShin</h1>
           </div>

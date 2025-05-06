@@ -35,6 +35,8 @@ const CareInstructions = ({images}: careImageProps) => {
                   width={35}
                   height={35}
                   className="cursor-pointer"
+                  unoptimized
+                  priority
                 />
               </TooltipTrigger>
               <TooltipContent>{img.careAlt}</TooltipContent>

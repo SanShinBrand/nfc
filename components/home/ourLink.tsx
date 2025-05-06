@@ -28,7 +28,7 @@ const OurLink = ({title}: TitleProps) => {
     <div className="bg-red-0 w-full px-3 sm:px-6 md:px-8">
       <div className="min-h-[68px] max-h-[68px] flex w-full md:max-w-lg overflow-hidden rounded shadow-md dark:bg-gray-800 ">
         <div className="flex items-center justify-center w-20 sm:w-24 mt bg-white ">
-          <Image src={logo_black} alt="logo" width={35} height={35} />
+          <Image src={logo_black} alt="logo" width={35} height={35} unoptimized priority />
         </div>
 
         <div className="w-full px-4 bg-gray-500 rounded-r flex items-center justify-between">
