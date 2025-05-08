@@ -15,11 +15,11 @@ type Props = {
 const page = async ({ params }: Props) => {
   const { id, link, from } = await params;
 
-  if (!id.includes("diPsIsihT")) return <NotFound />;
+  if (!id.includes("diPsIsihT")) return NotFound() ;
 
   const [pid] = id.split("diPsIsihT").map(Number);
 
-  if (isNaN(pid)|| pid < 0) return <NotFound />;
+  if (isNaN(pid)|| pid < 0) return NotFound();
 
   console.log("link", link);
 
