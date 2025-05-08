@@ -4,100 +4,129 @@ import { ImageSlider } from "@/components/home/imageSlider";
 import OurLink from "@/components/home/ourLink";
 import ProductDetails from "@/components/home/productDetils";
 import SizeChart from "@/components/home/table/sizeChart";
-import { db } from "@/server";
 import React from "react";
-import {
-  products,
-  productCares,
-  productImages,
-  productToImages,
-  productToCares,
-} from "@/server/schema";
-import { asc } from "drizzle-orm";
 import NotFound from "@/app/not-found";
 
 type Props = {
-  params: Promise<{ id: string }>;
-  
+  params: Promise<{ id: string; link: string; from: string }>;
 };
 
-type ProductWithRelations = typeof products.$inferSelect & {
-  imageLinks: (typeof productToImages.$inferSelect & {
-    image: typeof productImages.$inferSelect;
-  })[];
-  careLinks: (typeof productToCares.$inferSelect & {
-    care: typeof productCares.$inferSelect;
-  })[];
-};
 
 const page = async ({ params }: Props) => {
-  const { id } = await params;
+  const { id, link, from } = await params;
 
   if (!id.includes("diPsIsihT")) return <NotFound />;
 
-  const [qid, pid] = id.split("diPsIsihT").map(Number);
+  const [pid] = id.split("diPsIsihT").map(Number);
 
-  const QueryId = Number(qid);
+  if (isNaN(pid)|| pid < 0) return <NotFound />;
 
-  if (isNaN(QueryId)) return <NotFound />;
+  console.log("link", link);
 
-
-
-  const result = await db.query.products.findFirst({
-    where: (product, { eq }) => eq(product.id, QueryId),
-    with: {
-      imageLinks: {
-        orderBy: () => [asc(productToImages.serialNum)],
-        with: { image: true },
-      },
-      careLinks: {
-        orderBy: () => [asc(productToCares.serialNum)],
-        with: { care: true },
-      },
+  const ProductImages = [
+    {
+      id: 1,
+      productId: 1,
+      imageUrl:
+        "https://tau3p6lfc9.ufs.sh/f/2rAgtJR6HaZlzAnRO37k8J0U92pwrDE3hevAYdFOtsxljnfk",
+      imageAlt: "string",
+      serialNum: 1,
     },
-  });
+    {
+      id: 2,
+      productId: 2,
+      imageUrl:
+        "https://tau3p6lfc9.ufs.sh/f/2rAgtJR6HaZl38klLnyuLMckBQeNFEr2j5bDwx9K8OYtTfHC",
+      imageAlt: "string",
+      serialNum: 2,
+    },
+    {
+      id: 3,
+      productId: 3,
+      imageUrl:
+        "https://tau3p6lfc9.ufs.sh/f/2rAgtJR6HaZlYQH3XSUDBIeLFflNnmJVMb60yYpW8i1ah2Us",
+      imageAlt: "string",
+      serialNum: 3,
+    },
+    {
+      id: 4,
+      productId: 4,
+      imageUrl:
+        "https://tau3p6lfc9.ufs.sh/f/2rAgtJR6HaZlemgGYjlLJl3H0Nmxd7RCYODFjgtVAPKQTu4i",
+      imageAlt: "string",
+      serialNum: 4,
+    },
+  ];
 
-  const product = result as ProductWithRelations | undefined;
-
+  const CareInstructionImages = [
+      {
+        id : 1,
+        careUrl : "https://tau3p6lfc9.ufs.sh/f/2rAgtJR6HaZlZdlHkVYzxXuGakK6qpsvdgSA2ctMlmOIfHwi",
+        careAlt : "string",
+        serialNum : 1,
+      },
+      {
+        id : 2,
+        careUrl : "https://tau3p6lfc9.ufs.sh/f/2rAgtJR6HaZlGhhu1eLpWbpMUawg92dv6C8uHqXSZjDcekJB",
+        careAlt : "string",
+        serialNum : 2,
+      },
+      {
+        id : 3,
+        careUrl : "https://tau3p6lfc9.ufs.sh/f/2rAgtJR6HaZlz6z6qHk8J0U92pwrDE3hevAYdFOtsxljnfk4",
+        careAlt : "string",
+        serialNum : 3,
+      },
+      {
+        id : 4,
+        careUrl : "https://tau3p6lfc9.ufs.sh/f/2rAgtJR6HaZlsYrWxUmiDxwqMt1gH4SIPaTVc7JFiXOem5LA",
+        careAlt : "string",
+        serialNum : 4,
+      },
+      {
+        id : 5, 
+        "careUrl": "https://tau3p6lfc9.ufs.sh/f/2rAgtJR6HaZlvlrwwEK8xfKQSCt3NBuWGoPEZe79TczYhbDi",
+        careAlt : "string",
+        serialNum : 5,
+      }
+  ]
 
   return (
     <main className="flex flex-col gap-5 sm:gap-7 md:gap-9">
       {/* <ImageSlider images={product?.imagesLink || [] } /> */}
-      {product && product.imageLinks && product.imageLinks.length > 0 ? (
-        <>
+     
           <ImageSlider
-            images={product.imageLinks
-              .map((link) => ({
-                id: link.image.id,
-                productId: link.productId,
-                imageUrl: link.image.imageUrl,
-                imageAlt: link.image.imageAlt,
-                serialNum: link.serialNum,
-              }))
-              .sort((a, b) => a.serialNum - b.serialNum)}
+            images={ProductImages.map((link) => ({
+              id: link.id,
+              productId: link.productId,
+              imageUrl: link.imageUrl,
+              imageAlt: link.imageAlt,
+              serialNum: link.serialNum,
+            })).sort((a, b) => a.serialNum - b.serialNum)}
           />
-          <OurLink title={product.title! || "SanShin's Product"}/>
+          <OurLink title={"SanShin's Product"} />
           <ProductDetails
-          release_date={product?.release_date || ''}
-          material={product?.material || ''}
-          shopFrom={product?.shopFrom || ''}
-          shopFromUrl={product?.shopFromUrl || ''}
-          id={pid}
-        />
+            release_date={"2025-2-12"}
+            material={"100% cotton"}
+            shopFrom={from ? from : "SanShin"}
+            shopFromUrl={
+              link
+                ? link
+                : "https://www.facebook.com/profile.php?id=61568217312619&mibextid=ZbWKwL"
+            }
+            id={pid}
+          />
           <CareInstructions
-            images={product?.careLinks.map((link) => ({
-              id: link.care.id,
-              careUrl: link.care.careUrl,
-              careAlt: link.care.careAlt,
+            images={CareInstructionImages.map((link) => ({
+              id: link.id,
+              careUrl: link.careUrl,
+              careAlt: link.careAlt,
               serialNum: link.serialNum,
             }))}
           />
           <SizeChart />
           <ContactUs />
-        </>
-      ) : (
-        <NotFound />
-      )}
+      
 
       {/* <Footer/> */}
     </main>

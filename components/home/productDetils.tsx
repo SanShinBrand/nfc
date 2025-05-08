@@ -36,22 +36,17 @@ const ProductDetails = ({
 }: ProductDetails) => {
   const params = useSearchParams();
   const sizeData = params.get("size");
-  const colorData = params.get("c");
 
-  if (!sizeData || !colorData) return <NotFound />;
+  if (!sizeData ) return <NotFound />;
 
   const data = sizeData!.split("_");
 
   const sizeLetter = data[0].toUpperCase();
-  // const handleClick = (link: string) => {
-  //   // Check if the link starts with http:// or https://
-  //   if (link.startsWith("https://") || link.startsWith("http://")) {
-  //     window.location.href = link;
-  //   }
-  // };
+
   const handleClick = (link: string) => {
+    // Check if the link starts with http:// or https://
     if (link.startsWith("https://") || link.startsWith("http://")) {
-      window.open(link, '_blank');
+     window.location.href= link
     }
   };
 
@@ -81,7 +76,7 @@ const ProductDetails = ({
           <div className="flex flex-col ">
             <p className="primary-text">color</p>
             <div className="flex items-center gap-3">
-              <p className="secondary-text">{colorData}</p>
+              <p className="secondary-text">Black</p>
               <div className=" w-5 h-5 rounded"></div>
             </div>
           </div>

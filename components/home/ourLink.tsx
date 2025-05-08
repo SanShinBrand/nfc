@@ -23,7 +23,7 @@ const handleClick = (link: string) => {
 
 
 const OurLink = ({title}: TitleProps) => {
-  const link = "https://www.google.com";
+  const link = "https://www.google.com";  // replace with tiktok prodcut link or tiktok profile link
   return (
     <div className="bg-red-0 w-full px-3 sm:px-6 md:px-8">
       <div className="min-h-[68px] max-h-[68px] flex w-full md:max-w-lg overflow-hidden rounded shadow-md dark:bg-gray-800 ">
