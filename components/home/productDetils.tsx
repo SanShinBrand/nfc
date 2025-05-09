@@ -100,7 +100,7 @@ const ProductDetails = ({
             width={40}
             height={40}
             className="p-1"
-            unoptimized
+            
             priority
           />
           <div className="flex flex-col ">

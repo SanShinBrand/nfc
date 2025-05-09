@@ -8,7 +8,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-8">
       <div className="flex-1 flex flex-col items-center justify-center w-full">
         <div className="w-64 h-64 relative">
-          <Image src="../logo-white-svg.svg" alt="Logo" fill className="  object-contain " priority unoptimized />
+          <Image src="../logo-white-svg.svg" alt="Logo" fill className="  object-contain " priority  />
          </div>
          <h1 className="text-6xl font-bold text-center tracking-widest" >SanShin</h1>
       </div>
