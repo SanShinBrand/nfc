@@ -28,27 +28,27 @@
 const mainImg = [
   {
     id: 1,
-    src: "../1.webp",
+    src: "../real1.webp",
     alt: "A beautiful landscape with mountains and a lake",
   },
   {
     id: 2,
-    src: "../2.webp",
+    src: "../real2.webp",
     alt: "A beautiful landscape with mountains and a lake",
   },
   {
     id: 3,
-    src: "../3.webp",
+    src: "../real3.webp",
     alt: "A beautiful landscape with mountains and a lake",
   },
   {
     id: 4,
-    src: "../4.webp",
+    src: "../real4.webp",
     alt: "A beautiful landscape with mountains and a lake",
   },
     {
     id: 4,
-    src: "../4.webp",
+    src: "../real5.webp",
     alt: "A beautiful landscape with mountains and a lake",
   },
 ];
