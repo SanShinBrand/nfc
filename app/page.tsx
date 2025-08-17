@@ -12,7 +12,6 @@ import Contact from "@/components/sections/contact";
 import Features from "@/components/sections/features";
 import mainImg from "@/data/mainImg";
 export default function Page() {
-
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
@@ -52,9 +51,9 @@ export default function Page() {
 
             {/* Elegant Product Details */}
             <div className="space-y-6 sm:space-y-8">
-             <Suspense>
-               <Details  />
-             </Suspense>
+              <Suspense>
+                <Details />
+              </Suspense>
               <Features />
             </div>
           </div>
@@ -63,9 +62,9 @@ export default function Page() {
           <Care />
 
           {/* Elegant Size Chart */}
-         <Suspense>
-           <SizeChart  />
-         </Suspense>
+          <Suspense>
+            <SizeChart />
+          </Suspense>
 
           {/* Elegant Details Grid */}
           <div className="mt-8 sm:mt-12">
@@ -76,6 +75,7 @@ export default function Page() {
                   Craftsmanship Details
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                  {/* Item 1: Handcrafted Time (Blue) - No change */}
                   <div className="luxury-detail-item">
                     <div className="flex items-center gap-3 sm:gap-4">
                       <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
@@ -94,6 +94,7 @@ export default function Page() {
                     </div>
                   </div>
 
+                  {/* Item 2: Quality Assurance (Green) - No change */}
                   <div className="luxury-detail-item">
                     <div className="flex items-center gap-3 sm:gap-4">
                       <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center shadow-lg shadow-green-500/30">
@@ -112,9 +113,10 @@ export default function Page() {
                     </div>
                   </div>
 
+                  {/* Item 3: Origin (Changed to Amber) */}
                   <div className="luxury-detail-item">
                     <div className="flex items-center gap-3 sm:gap-4">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/30">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center shadow-lg shadow-amber-500/30">
                         <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                       </div>
                       <div className="flex-1">
@@ -122,7 +124,7 @@ export default function Page() {
                           Origin
                         </span>
                         <div className="mt-1">
-                          <Badge className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 text-purple-300 border-purple-500/30 font-light text-xs">
+                          <Badge className="bg-gradient-to-r from-amber-500/20 to-amber-600/20 text-amber-300 border-amber-500/30 font-light text-xs">
                             Handmade in Myanmar
                           </Badge>
                         </div>
@@ -130,26 +132,10 @@ export default function Page() {
                     </div>
                   </div>
 
+                  {/* Item 4: NFC Technology (Changed to Purple) */}
                   <div className="luxury-detail-item">
                     <div className="flex items-center gap-3 sm:gap-4">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center shadow-lg shadow-amber-500/30">
-                        <Crown className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <span className="text-blue-200/80 font-light tracking-wide text-xs sm:text-sm">
-                          Limited Run
-                        </span>
-                        <div className="mt-1">
-                          <Badge className="bg-gradient-to-r from-amber-500/20 to-amber-600/20 text-amber-300 border-amber-500/30 font-light text-xs">
-                            One of 100 Exclusive Pieces
-                          </Badge>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="luxury-detail-item">
-                    <div className="flex items-center gap-3 sm:gap-4">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center shadow-lg shadow-green-500/30">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/30">
                         <Radio className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                       </div>
                       <div className="flex-1">
@@ -157,7 +143,7 @@ export default function Page() {
                           NFC Technology
                         </span>
                         <div className="mt-1">
-                          <Badge className="bg-gradient-to-r from-green-500/20 to-green-600/20 text-green-300 border-green-500/30 font-light text-xs">
+                          <Badge className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 text-purple-300 border-purple-500/30 font-light text-xs">
                             Embedded Smart Chip
                           </Badge>
                         </div>
