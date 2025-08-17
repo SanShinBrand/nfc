@@ -11,7 +11,7 @@ const productDetails = [
     id: 2,
     icon: Expand,
     label: "Size",
-    value: "S",
+    value: "M",
   },
   {
     id: 3,
@@ -23,13 +23,13 @@ const productDetails = [
     id: 4,
     icon: Shirt,
     label: "Material",
-    value: "Premium Cotton",
+    value: "Premium Air Layer",
   },
   {
     id: 5,
     icon: Package,
     label: "Weight",
-    value: "180g",
+    value: "300 GSM",
   },
   {
     id: 6,
