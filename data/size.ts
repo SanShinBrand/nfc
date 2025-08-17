@@ -12,7 +12,7 @@ const sizeChart = [
     size: "L",
     shoulder: "22",
     chest: "24",
-    sleeve: "25",
+    sleeve: "11",
     length: "29",
   },
 ];
