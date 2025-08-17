@@ -1,56 +1,29 @@
-// const mainImg = [
-//   {
-//     id: 1,
-//     src: "https://tau3p6lfc9.ufs.sh/f/2rAgtJR6HaZlzAnRO37k8J0U92pwrDE3hevAYdFOtsxljnfk",
-//     alt: "A beautiful landscape with mountains and a lake",
-//   },
-//   {
-//     id: 2,
-//     src: "https://tau3p6lfc9.ufs.sh/f/2rAgtJR6HaZl38klLnyuLMckBQeNFEr2j5bDwx9K8OYtTfHC",
-//     alt: "A beautiful landscape with mountains and a lake",
-//   },
-//   {
-//     id: 3,
-//     src: "https://tau3p6lfc9.ufs.sh/f/2rAgtJR6HaZlYQH3XSUDBIeLFflNnmJVMb60yYpW8i1ah2Us",
-//     alt: "A beautiful landscape with mountains and a lake",
-//   },
-//   {
-//     id: 4,
-//     src: "https://tau3p6lfc9.ufs.sh/f/2rAgtJR6HaZlemgGYjlLJl3H0Nmxd7RCYODFjgtVAPKQTu4i",
-//     alt: "A beautiful landscape with mountains and a lake",
-//   },
-//     {
-//     id: 4,
-//     src: "https://tau3p6lfc9.ufs.sh/f/2rAgtJR6HaZlemgGYjlLJl3H0Nmxd7RCYODFjgtVAPKQTu4i",
-//     alt: "A beautiful landscape with mountains and a lake",
-//   },
-// ];
 const mainImg = [
   {
     id: 1,
     src: "../real1.webp",
-    alt: "A beautiful landscape with mountains and a lake",
+    alt: "Front view of the black 'ACTIVATE BOXY TEE' featuring a retro 'upgrading' computer dialog box patch.",
   },
   {
     id: 2,
     src: "../real2.webp",
-    alt: "A beautiful landscape with mountains and a lake",
+    alt: "Close-up of the embroidered patch on the 'ACTIVATE BOXY TEE', showing a computer dialog box with 'Your tee is upgrading...' text.",
   },
   {
     id: 3,
     src: "../real3.webp",
-    alt: "A beautiful landscape with mountains and a lake",
+    alt: "Close-up of the white warning sign symbol printed on the back of the 'ACTIVATE BOXY TEE'.",
   },
   {
     id: 4,
     src: "../real4.webp",
-    alt: "A beautiful landscape with mountains and a lake",
+    alt: "The 'ACTIVATE BOXY TEE' displayed on a hanger in a shopping cart with its brand tags.",
   },
-    {
-    id: 4,
+  {
+    id: 5,
     src: "../real5.webp",
-    alt: "A beautiful landscape with mountains and a lake",
+    alt: "A person wearing the 'ACTIVATE BOXY TEE' while pushing a shopping cart with the branded product box.",
   },
 ];
 
-export default mainImg
+export default mainImg;

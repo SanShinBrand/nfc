@@ -5,7 +5,7 @@ const productDetails = [
     id: 1,
     icon: Calendar,
     label: "Launch Date",
-    value: "2025-2-12",
+    value: "20-8-2025",
   },
   {
     id: 2,
