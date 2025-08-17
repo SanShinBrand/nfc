@@ -4,7 +4,7 @@ const sizeChart = [
     size: "M",
     shoulder: "21",
     chest: "23",
-    sleeve: "10",
+    sleeve: "10.5",
     length: "29",
   },
   {

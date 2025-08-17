@@ -33,7 +33,7 @@ const Header = () => {
                 SanShin
               </h1>
               <p className="text-blue-200/80 text-xs sm:text-base font-light tracking-wider">
-                Luxury Collection
+                ACTIVATE BOXY TEE
               </p>
             </div>
           </div>

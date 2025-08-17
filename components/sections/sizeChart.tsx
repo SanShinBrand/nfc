@@ -1,15 +1,16 @@
-"use client"
+"use client";
 
 import sizeChart from "@/data/size";
 import { Globe } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import React from "react";
 
-
 const SizeChart = () => {
   const params = useSearchParams();
-  const size = params.get("size") ?? "M";
+  // 1. Get the 'size' from the URL (e.g., ?size=L), or default to "M"
+  const size = params.get("s") ?? "M";
   const sizeData = sizeChart.find((item) => item.id === size);
+
   return (
     <div className="luxury-card mt-8 sm:mt-12">
       <div className="p-4 sm:p-6 md:p-8">
@@ -39,6 +40,7 @@ const SizeChart = () => {
               </tr>
             </thead>
             <tbody>
+              {/* 3. Check if sizeData was found. If yes, render the single row. */}
               {sizeData ? (
                 <tr className="hover:bg-blue-500/5 transition-colors border-b border-blue-500/10">
                   <td className="p-3 sm:p-6 text-white font-semibold text-sm sm:text-lg">
@@ -58,6 +60,7 @@ const SizeChart = () => {
                   </td>
                 </tr>
               ) : (
+                // 4. If no matching size was found, show a "not found" message.
                 <tr>
                   <td colSpan={5} className="p-3 sm:p-6 text-white text-center">
                     Size data not found.
