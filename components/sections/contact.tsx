@@ -46,12 +46,12 @@ const Contact = () => {
                 {
                   icon: Facebook,
                   color: "text-blue-400",
-                  link: "https://www.facebook.com/sanshin739",
+                  link: "https://www.facebook.com/share/1Bev5MRG2D/",
                 },
                 {
                   icon: Instagram,
                   color: "text-blue-400",
-                  link: "https://www.instagram.com/sanshin739",
+                  link: "https://www.instagram.com/sanshin.ac",
                 },
                 {
                   icon: TikTokIcon,
