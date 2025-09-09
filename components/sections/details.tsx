@@ -19,7 +19,7 @@ import React from "react";
 const Details = () => {
   const params = useSearchParams();
   const size = params.get("s") ?? "M";
-  const url = params.get("u") ?? "@sanshin.offical";
+  const url = params.get("u") ?? "@sanshin.official";
   const sf = params.get("sf") ?? "SanShin";
   console.log("url", size);
 
