@@ -2,18 +2,18 @@ const sizeChart = [
   {
     id: "M",
     size: "M",
-    shoulder: "21",
-    chest: "23",
+    shoulder: "22",
+    chest: "24",
     sleeve: "10.5",
-    length: "29",
+    length: "26",
   },
   {
     id: "L",
     size: "L",
-    shoulder: "22",
-    chest: "24",
+    shoulder: "23",
+    chest: "25",
     sleeve: "11",
-    length: "29",
+    length: "27",
   },
 ];
 
